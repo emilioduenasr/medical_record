@@ -1,0 +1,98 @@
+2025-06-26 14:28:44 Backend running on http://localhost:5000
+2025-06-26 14:30:30 Backend running on http://localhost:5000
+2025-06-26 14:31:18 Nueva solicitud: POST /api/users
+2025-06-26 14:34:28 Backend running on http://localhost:5000
+2025-06-26 14:34:38 Nueva solicitud: POST /api/users
+2025-06-26 14:36:20 Backend running on http://localhost:5000
+2025-06-26 14:36:25 Nueva solicitud: POST /api/users
+2025-06-26 14:38:06 Backend running on http://localhost:5000
+2025-06-26 14:38:09 Nueva solicitud: POST /api/users
+2025-06-26 14:40:39 Nueva solicitud: POST /api/users
+2025-06-26 14:43:59 Backend running on http://localhost:5000
+2025-06-26 14:44:24 Nueva solicitud: POST /api/login
+2025-06-26 14:44:24 Intento de login fallido: Contraseña incorrecta para el usuario - user
+2025-06-26 14:44:34 Nueva solicitud: POST /api/login
+2025-06-26 14:44:35 Login exitoso: user se ha autenticado correctamente
+2025-06-26 14:54:19 Backend running on http://localhost:5000
+2025-06-26 14:54:25 Nueva solicitud: GET /api-docs/
+2025-06-26 14:54:25 Nueva solicitud: GET /api-docs/swagger-ui.css
+2025-06-26 14:54:25 Nueva solicitud: GET /api-docs/swagger-ui-bundle.js
+2025-06-26 14:54:25 Nueva solicitud: GET /api-docs/swagger-ui-standalone-preset.js
+2025-06-26 14:54:25 Nueva solicitud: GET /api-docs/swagger-ui-init.js
+2025-06-26 14:54:25 Nueva solicitud: GET /api-docs/favicon-16x16.png
+2025-06-26 14:54:36 Nueva solicitud: POST /api/patients
+2025-06-26 14:56:50 Backend running on http://localhost:5000
+2025-06-26 14:56:56 Nueva solicitud: POST /api/patients
+2025-06-26 14:56:56 El número de documento ya está registrado: 123456789
+2025-06-26 14:57:22 Nueva solicitud: POST /api/patients
+2025-06-26 14:57:22 Error al registrar el paciente: value too long for type character(1)
+2025-06-26 14:57:39 Nueva solicitud: POST /api/patients
+2025-06-26 14:57:39 Nuevo paciente registrado: Mary Jane (120120120)
+2025-06-26 15:10:06 Backend running on http://localhost:5000
+2025-06-26 15:10:13 Nueva solicitud: GET /api-docs/
+2025-06-26 15:10:13 Ruta no encontrada: GET /api-docs/
+2025-06-26 15:10:13 Nueva solicitud: GET /favicon.ico
+2025-06-26 15:10:13 Ruta no encontrada: GET /favicon.ico
+2025-06-26 15:10:35 Nueva solicitud: GET /api-docs/
+2025-06-26 15:10:35 Ruta no encontrada: GET /api-docs/
+2025-06-26 15:10:35 Nueva solicitud: GET /favicon.ico
+2025-06-26 15:10:35 Ruta no encontrada: GET /favicon.ico
+2025-06-26 15:13:05 Backend running on http://localhost:5000
+2025-06-26 15:13:08 Nueva solicitud: GET /api-docs/
+2025-06-26 15:13:08 Ruta no encontrada: GET /api-docs/
+2025-06-26 15:13:08 Nueva solicitud: GET /favicon.ico
+2025-06-26 15:13:08 Ruta no encontrada: GET /favicon.ico
+2025-06-26 15:13:13 Nueva solicitud: GET /api-docs/
+2025-06-26 15:13:13 Ruta no encontrada: GET /api-docs/
+2025-06-26 15:13:13 Nueva solicitud: GET /favicon.ico
+2025-06-26 15:13:13 Ruta no encontrada: GET /favicon.ico
+2025-06-26 15:13:34 Nueva solicitud: GET /api-docs
+2025-06-26 15:13:34 Ruta no encontrada: GET /api-docs
+2025-06-26 15:13:34 Nueva solicitud: GET /favicon.ico
+2025-06-26 15:13:34 Ruta no encontrada: GET /favicon.ico
+2025-06-26 15:16:27 Backend running on http://localhost:5000
+2025-06-26 15:16:49 Nueva solicitud: GET /api/patients/search?last_name=Doe
+2025-06-26 15:16:49 Ruta no encontrada: GET /api/patients/search?last_name=Doe
+2025-06-26 15:17:09 Nueva solicitud: GET /api/patients/search?document_number=120120120
+2025-06-26 15:17:09 Ruta no encontrada: GET /api/patients/search?document_number=120120120
+2025-06-26 15:21:14 Backend running on http://localhost:5000
+2025-06-26 15:21:17 Nueva solicitud: GET /api/patients/search?document_number=120120120
+2025-06-26 15:21:17 Ruta no encontrada: GET /api/patients/search?document_number=120120120
+2025-06-26 15:23:13 Backend running on http://localhost:5000
+2025-06-26 15:23:16 Nueva solicitud: POST /api/patients/create
+2025-06-26 15:23:16 Ruta no encontrada: POST /api/patients/create
+2025-06-26 15:23:19 Nueva solicitud: POST /api/patients/create
+2025-06-26 15:23:19 Ruta no encontrada: POST /api/patients/create
+2025-06-26 15:28:35 Backend running on http://localhost:5000
+2025-06-26 15:28:41 Nueva solicitud: POST /api/users
+2025-06-26 15:28:41 Ruta no encontrada: POST /api/users
+2025-06-26 15:29:53 Backend running on http://localhost:5000
+2025-06-26 15:30:02 Nueva solicitud: POST /api/login
+2025-06-26 15:30:02 Ruta no encontrada: POST /api/login
+2025-06-26 15:31:01 Backend running on http://localhost:5000
+2025-06-26 15:31:05 Nueva solicitud: POST /api/login
+2025-06-26 15:31:06 Login exitoso: user se ha autenticado correctamente
+2025-06-26 15:31:15 Nueva solicitud: GET /api/patients/search?document_number=120120120
+2025-06-26 15:31:15 Búsqueda de paciente realizada con éxito: {"document_number":"120120120"}
+2025-06-26 16:22:25 Backend running on http://localhost:5000
+2025-06-26 16:24:10 Backend running on http://localhost:5000
+2025-06-26 16:24:25 Backend running on http://localhost:5000
+2025-06-26 16:24:38 Nueva solicitud: POST /api/login
+2025-06-26 16:24:38 Login exitoso: user se ha autenticado correctamente
+2025-06-26 16:25:11 Nueva solicitud: POST /api/login
+2025-06-26 16:25:11 Intento de login fallido: Contraseña incorrecta para el usuario - user
+2025-06-26 16:28:33 Nueva solicitud: POST /api/patients/create
+2025-06-26 16:29:00 Nueva solicitud: POST /api/patients/create
+2025-06-26 16:29:00 Error al registrar el paciente: value too long for type character varying(5)
+2025-06-26 16:29:13 Nueva solicitud: POST /api/patients/create
+2025-06-26 16:29:13 Error al registrar el paciente: value too long for type character varying(5)
+2025-06-26 16:30:16 Nueva solicitud: POST /api/patients/create
+2025-06-26 16:30:17 Nuevo paciente registrado: Adriana chame (02020524)
+2025-06-26 16:30:48 Nueva solicitud: GET /api/patients/search?document_number=120120120
+2025-06-26 16:30:48 Búsqueda de paciente realizada con éxito: {"document_number":"120120120"}
+2025-06-26 16:31:05 Nueva solicitud: GET /api/patients/search?first_name=Mary
+2025-06-26 16:31:05 Búsqueda de paciente realizada con éxito: {"first_name":"Mary"}
+2025-06-26 16:31:10 Nueva solicitud: GET /api/patients/search?first_name=Adriana
+2025-06-26 16:31:10 Búsqueda de paciente realizada con éxito: {"first_name":"Adriana"}
+2025-06-26 16:31:20 Nueva solicitud: GET /api/patients/search?last_name=chame
+2025-06-26 16:31:20 Búsqueda de paciente realizada con éxito: {"last_name":"chame"}
