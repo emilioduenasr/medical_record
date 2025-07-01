@@ -57,48 +57,29 @@ const createPatient = async (req, res) => {
  * Función para buscar pacientes por nombre o número de documento
  */
 const searchPatient = async (req, res) => {
-  const { first_name, last_name, document_number } = req.query;  // Buscar por parámetros de consulta (query)
+  const { q } = req.query; // Un único parámetro para búsqueda flexible
 
   try {
-    // Construir la consulta dinámica basándonos en los parámetros que se proporcionen
-    let query = 'SELECT * FROM medical_record.patients WHERE ';
-    let values = [];
-    let conditions = [];
-
-    // Condiciones de búsqueda
-    if (first_name) {
-      conditions.push('first_name ILIKE $' + (values.length + 1));  // Busca por nombre
-      values.push('%' + first_name + '%');
+    if (!q || q.trim() === '') {
+      return res.status(400).json({ message: 'Debe proporcionar un término de búsqueda' });
     }
 
-    if (last_name) {
-      conditions.push('last_name ILIKE $' + (values.length + 1));  // Busca por apellido
-      values.push('%' + last_name + '%');
-    }
+    const searchValue = `%${q.trim().toLowerCase()}%`;
 
-    if (document_number) {
-      conditions.push('document_number = $' + (values.length + 1));  // Busca por número de documento
-      values.push(document_number);
-    }
+    const query = `
+      SELECT * FROM medical_record.patients
+      WHERE LOWER(first_name) LIKE $1
+         OR LOWER(last_name) LIKE $1
+         OR LOWER(document_number) LIKE $1
+    `;
 
-    if (conditions.length === 0) {
-      return res.status(400).json({ message: 'Debe proporcionar al menos un parámetro de búsqueda' });
-    }
+    const result = await client.query(query, [searchValue]);
 
-    query += conditions.join(' AND ');  // Unir todas las condiciones con 'AND'
-
-    // Ejecutar la consulta
-    const result = await client.query(query, values);
-
-    // Si no se encuentra el paciente
     if (result.rows.length === 0) {
       return res.status(404).json({ message: 'Paciente no encontrado' });
     }
 
-    // Log de la búsqueda
-    logger.info(`Búsqueda de paciente realizada con éxito: ${JSON.stringify(req.query)}`);
-
-    // Responder con los pacientes encontrados
+    logger.info(`Búsqueda de paciente realizada con éxito: "${q}"`);
     res.status(200).json({ message: 'Paciente(s) encontrado(s)', patients: result.rows });
   } catch (error) {
     logger.error(`Error al buscar paciente: ${error.message}`);
@@ -107,7 +88,24 @@ const searchPatient = async (req, res) => {
   }
 };
 
+/**
+ * Obtener todos los pacientes sin filtros
+ */
+const getAllPatients = async (req, res) => {
+  try {
+    const query = 'SELECT * FROM medical_record.patients ORDER BY last_name, first_name';
+    const result = await client.query(query);
+    res.status(200).json({ patients: result.rows });
+  } catch (error) {
+    logger.error(`Error al obtener todos los pacientes: ${error.message}`);
+    res.status(500).json({ message: 'Error al obtener la lista de pacientes' });
+  }
+};
+
+
 module.exports = {
   createPatient,  // Para la creación del paciente
   searchPatient,  // Para la búsqueda de paciente
+    getAllPatients,
+
 };

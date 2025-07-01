@@ -8,6 +8,7 @@ const { login } = require('../controllers/authController'); // Importar la funci
  * /login:
  *   post:
  *     summary: Login para el usuario
+ *     tags: [Login]
  *     description: Permite al usuario autenticarse proporcionando su nombre de usuario y contraseña.
  *     requestBody:
  *       required: true

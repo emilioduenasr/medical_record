@@ -1,0 +1,33 @@
+2025-07-01 10:11:12 Backend running on http://localhost:5000
+2025-07-01 10:11:54 Backend running on http://localhost:5000
+2025-07-01 10:12:14 Nueva solicitud: POST /api/login
+2025-07-01 10:12:15 Intento de login fallido: Contraseña incorrecta para el usuario - user
+2025-07-01 10:12:21 Nueva solicitud: POST /api/login
+2025-07-01 10:12:21 Login exitoso: user se ha autenticado correctamente
+2025-07-01 10:12:24 Nueva solicitud: GET /api/icd10
+2025-07-01 10:12:25 Nueva solicitud: GET /api/icd10
+2025-07-01 10:12:25 Solicitud de ICD10 exitosa [object Object]
+2025-07-01 10:12:25 Solicitud de ICD10 exitosa [object Object]
+2025-07-01 10:12:34 Nueva solicitud: GET /api/patients/search?q=adriana
+2025-07-01 10:12:35 Búsqueda de paciente realizada con éxito: "adriana"
+2025-07-01 10:13:05 Nueva solicitud: POST /api/consultations/register
+2025-07-01 10:13:05 Registro de consulta exitoso [object Object], para paciente 3
+2025-07-01 10:14:22 Nueva solicitud: POST /api/patients/create
+2025-07-01 10:14:23 Nuevo paciente registrado: Gerardo Gatusso (3456)
+2025-07-01 10:15:21 Nueva solicitud: GET /api/icd10
+2025-07-01 10:15:21 Nueva solicitud: GET /api/icd10
+2025-07-01 10:15:21 Solicitud de ICD10 exitosa [object Object]
+2025-07-01 10:15:22 Solicitud de ICD10 exitosa [object Object]
+2025-07-01 10:15:26 Nueva solicitud: GET /api/patients/search?q=130130
+2025-07-01 10:15:30 Nueva solicitud: GET /api/patients/search?q=doe
+2025-07-01 10:15:31 Búsqueda de paciente realizada con éxito: "doe"
+2025-07-01 10:17:20 Nueva solicitud: POST /api/treatments
+2025-07-01 10:17:20 Registro de receta erroneo error: insert or update on table "treatments" violates foreign key constraint "treatments_consultation_id_fkey"
+2025-07-01 10:17:56 Nueva solicitud: POST /api/treatments
+2025-07-01 10:17:56 Registro de receta exitoso [object Object]
+2025-07-01 10:18:36 Nueva solicitud: GET /api/patients/all
+2025-07-01 10:18:36 Nueva solicitud: GET /api/patients/all
+2025-07-01 10:18:41 Nueva solicitud: GET /api/patients/all
+2025-07-01 10:18:41 Nueva solicitud: GET /api/patients/all
+2025-07-01 10:18:49 Nueva solicitud: GET /api/consultations/history?patient_id=3
+2025-07-01 10:18:49 Historial médico recuperado para el paciente ID 3

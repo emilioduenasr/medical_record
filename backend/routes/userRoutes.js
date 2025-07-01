@@ -8,6 +8,7 @@ const { createUser } = require('../controllers/userController');
  * /users:
  *   post:
  *     summary: Crear un nuevo usuario
+ *         tags: [Usuario]
  *     description: Permite crear un nuevo usuario con nombre de usuario, contraseña, rol y proveedor (opcional).
  *     requestBody:
  *       required: true

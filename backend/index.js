@@ -8,6 +8,10 @@ const userRoutes = require('./routes/userRoutes');  // Importar las rutas de usu
 const patientRoutes = require('./routes/patientRoutes');  // Importar las rutas de pacientes
 const swaggerUi = require('swagger-ui-express');
 const swaggerJsdoc = require('swagger-jsdoc');
+const icd10Routes = require('./routes/icd10Routes');
+const consultationRoutes = require('./routes/consultationRoutes');
+const treatmentRoutes = require('./routes/treatmentRoutes');
+
 
 dotenv.config();  // Para cargar variables de entorno desde el archivo .env
 
@@ -51,6 +55,9 @@ app.use((req, res, next) => {
 app.use('/api', authRoutes);  // Asegúrate de que las rutas de autenticación estén correctamente registradas
 app.use('/api', userRoutes);  // Asegúrate de que las rutas de usuario estén correctamente registradas
 app.use('/api', patientRoutes);  // Asegúrate de que las rutas de pacientes estén correctamente registradas
+app.use('/api', icd10Routes);
+app.use('/api', consultationRoutes);
+app.use('/api', treatmentRoutes);
 
 // Middleware para manejar errores de rutas no encontradas (404)
 app.use((req, res, next) => {

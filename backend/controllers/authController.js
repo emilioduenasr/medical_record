@@ -3,9 +3,7 @@ const bcrypt = require('bcryptjs');
 const client = require('../db');  // Importar la conexión a la base de datos
 const logger = require('../logger');  // Importar el logger
 
-/**
- * Función para manejar el login
- */
+
 const login = async (req, res) => {
   const { username, password } = req.body;
 
